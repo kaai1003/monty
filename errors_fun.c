@@ -1,6 +1,6 @@
 #include "monty.h"
 
-void err(int *code_err, ...)
+void err(int code_err, ...)
 {
     va_list ag;
     char *rv;

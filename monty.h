@@ -43,9 +43,10 @@ extern stack_t *head;
 typedef void (*op_func)(stack_t **, unsigned int);
 
 /*errors_fun.c*/
-void err(int *code_err, ...);
+void err(int code_err, ...);
 void string_err(int code_err, ...);
 void more_err(int code_err, ...);
+int parse_line(char *buffer, int line_number, int format);
 /*main.c*/
 int main(int argc, char *argv[]);
 stack_t *create_node(int n);
