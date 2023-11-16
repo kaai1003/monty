@@ -74,5 +74,10 @@ void rotr(stack_t **stack, __attribute__((unused))unsigned int ln);
 /*tools.c*/
 void open_file (char *file);
 void read_file(FILE *jv);
+/*other func*/
+void read_file(FILE *);
+int len_chars(FILE *);
+void find_func(char *, char *, int, int);
+void call_fun(op_func, char *, char *, int, int);
 
 #endif

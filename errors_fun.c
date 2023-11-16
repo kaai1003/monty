@@ -10,7 +10,7 @@ void err(int code_err, ...)
     switch (code_err)
     {
     case 1:
-        fprintf(stderr, "USAGE: Can't open file %s\n");
+        fprintf(stderr, "USAGE: monty file\n");
         break;
     case 2:
         fprintf(stderr, "Error 404: Can't open file %s\n", va_arg(ag, char *));
