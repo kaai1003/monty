@@ -57,6 +57,7 @@ void free_nodes(void)
 /**
  * add_to_queue - add node to queue
  * @new_node: node to add
+ * @ln: line number
  *
  * Return: nothing
  */

@@ -1,6 +1,11 @@
 #include "monty.h"
-
-
+/**
+ * multiNodes - multiply 2 elements of the top stack
+ * @stack: pointer to stack
+ * @line_num: line number
+ *
+ * Return: nothing
+ */
 void multiNodes(stack_t **stack, unsigned int line_num)
 {
 	int sum;
@@ -14,9 +19,13 @@ void multiNodes(stack_t **stack, unsigned int line_num)
 	free((*stack)->prev);
 	(*stack)->prev = NULL;
 }
-
-
-
+/**
+ * modNodes - find modulo of 2 top elemnts of stack
+ * @stack: pointer to stack
+ * @line_num: line number
+ *
+ * Return: nothing
+ */
 void modNodes(stack_t **stack, unsigned int line_num)
 {
 	int sum;
