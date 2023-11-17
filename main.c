@@ -1,7 +1,12 @@
 #include "monty.h"
 stack_t *head = NULL;
-
-
+/**
+ * main - execute monty files
+ * @argc: number of args
+ * @argv: args passed to programm
+ *
+ * Return: 0
+ */
 int main(int argc, char *argv[])
 {
 	if (argc != 2)
@@ -13,8 +18,12 @@ int main(int argc, char *argv[])
 	free_nodes();
 	return (0);
 }
-
-
+/**
+ * create_node - add new node
+ * @n: int value to add
+ *
+ * Return: pointer to node
+ */
 stack_t *create_node(int n)
 {
 	stack_t *node;
@@ -27,15 +36,17 @@ stack_t *create_node(int n)
 	node->n = n;
 	return (node);
 }
-
-
+/**
+ * free_nodes - free linked list memory
+ *
+ * Return: nothing
+ */
 void free_nodes(void)
 {
 	stack_t *tmp;
 
 	if (head == NULL)
 		return;
-
 	while (head != NULL)
 	{
 		tmp = head;
@@ -43,9 +54,12 @@ void free_nodes(void)
 		free(tmp);
 	}
 }
-
-
-
+/**
+ * add_to_queue - add node to queue
+ * @new_node: node to add
+ *
+ * Return: nothing
+ */
 void add_to_queue(stack_t **new_node, __attribute__((unused))unsigned int ln)
 {
 	stack_t *tmp;
@@ -63,5 +77,4 @@ void add_to_queue(stack_t **new_node, __attribute__((unused))unsigned int ln)
 
 	tmp->next = *new_node;
 	(*new_node)->prev = tmp;
-
 }

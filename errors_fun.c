@@ -1,38 +1,48 @@
 #include "monty.h"
-
+/**
+ * err - print error on stderr
+ * @code_err: error code
+ *
+ * Return: nothing
+ */
 void err(int code_err, ...)
 {
-    va_list ag;
-    char *rv;
-    int num;
+	va_list ag;
+	char *rv;
+	int num;
 
-    va_start(ag, code_err);
-    switch (code_err)
-    {
-    case 1:
-        fprintf(stderr, "USAGE: monty file\n");
-        break;
-    case 2:
-        fprintf(stderr, "Error 404: Can't open file %s\n", va_arg(ag, char *));
-        break;
-    case 3:
-        rv = va_arg(ag, char *);
-        num = va_arg(ag, int);
-        fprintf(stderr, "L%d: ybjbiwb ubstryctuib %s\n", num, rv);
-        break;
-    case 4:
-    fprintf(stderr, "Error: malloc failed\n");
-    break;
-    case 5:
-    fprintf(stderr, "L%d: usage: push integer\n", va_arg(ag, int));
-    break;
-    default:
-        break;
-    }
-    free_nodes();
-    exit(EXIT_FAILURE);
+	va_start(ag, code_err);
+	switch (code_err)
+	{
+	case 1:
+	fprintf(stderr, "USAGE: monty file\n");
+	break;
+	case 2:
+	fprintf(stderr, "Error 404: Can't open file %s\n", va_arg(ag, char *));
+	break;
+	case 3:
+	rv = va_arg(ag, char *);
+	num = va_arg(ag, int);
+	fprintf(stderr, "L%d: ybjbiwb ubstryctuib %s\n", num, rv);
+	break;
+	case 4:
+	fprintf(stderr, "Error: malloc failed\n");
+	break;
+	case 5:
+	fprintf(stderr, "L%d: usage: push integer\n", va_arg(ag, int));
+	break;
+	default:
+	break;
+	}
+	free_nodes();
+	exit(EXIT_FAILURE);
 }
-
+/**
+ * string_err - print string errors on stderr
+ * @code_err: error code
+ *
+ * Return: nothing
+ */
 void string_err(int code_err, ...)
 {
 	va_list ag;
@@ -54,7 +64,12 @@ void string_err(int code_err, ...)
 	free_nodes();
 	exit(EXIT_FAILURE);
 }
-
+/**
+ * more_err - print more errors to stderr
+ * @code_err: error code
+ *
+ * Return: nothing
+ */
 void more_err(int code_err, ...)
 {
 	va_list ag;

@@ -20,9 +20,9 @@
  */
 typedef struct stack_s
 {
-        int n;
-        struct stack_s *prev;
-        struct stack_s *next;
+	int n;
+	struct stack_s *prev;
+	struct stack_s *next;
 } stack_t;
 
 /**
@@ -35,8 +35,8 @@ typedef struct stack_s
  */
 typedef struct instruction_s
 {
-        char *opcode;
-        void (*f)(stack_t **stack, unsigned int line_number);
+	char *opcode;
+	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
 extern stack_t *head;
@@ -57,7 +57,7 @@ void multiNodes(stack_t **stack, unsigned int line_num);
 void modNodes(stack_t **stack, unsigned int line_num);
 /*stackFun1.c*/
 void addToStack(stack_t **newNode, __attribute__((unused)) unsigned int ln);
-void printStack (stack_t **stack, unsigned int line_num);
+void printStack(stack_t **stack, unsigned int line_num);
 void popTop(stack_t **stack, unsigned int line_number);
 void printTop(stack_t **stack, unsigned int line_number);
 /*stackFun2.c*/
@@ -72,7 +72,7 @@ void print_string(stack_t **stack, __attribute__((unused))unsigned int ln);
 void rotl(stack_t **stack, __attribute__((unused))unsigned int ln);
 void rotr(stack_t **stack, __attribute__((unused))unsigned int ln);
 /*tools.c*/
-void open_file (char *file);
+void open_file(char *file);
 void read_file(FILE *jv);
 /*other func*/
 void read_file(FILE *);
