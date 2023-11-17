@@ -48,7 +48,7 @@ int parse_line(char *buffer, int line_number, int format)
 	if (buffer == NULL)
 		err(4);
 	opcode = strtok(buffer, delim);
-	if (opcode == NULL)
+	if (opcode == NULL || opcode[0] == '#')
 		return (format);
 	val = strtok(NULL, delim);
 	if (strcmp(opcode, "stack") == 0)
